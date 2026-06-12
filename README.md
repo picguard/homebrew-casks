@@ -12,14 +12,16 @@
 
 ## Install
 
-`brew install picguard/casks/<cask>`
+> Starting with Homebrew 6.0.0, you must trust non-official taps to install them. See [Tap Trust](https://docs.brew.sh/Tap-Trust).
 
-Or `brew tap picguard/casks` and then `brew install <cask>`.
+Run `brew trust --cask picguard/casks/<cask>` and `brew install --cask picguard/casks/<cask>`
+
+Or run `brew tap picguard/casks`, `brew trust picguard/casks` and `brew install <cask>`.
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
 ```ruby
-tap "picguard/casks"
+tap "picguard/casks", trusted: true
 brew "<cask>"
 ```
 
